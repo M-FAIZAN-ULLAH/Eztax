@@ -1,3 +1,21 @@
+# To run this project
+
+First run the command inside the directory of this app 
+
+### `npm install`
+
+then run command
+
+### `npm start`
+
+if this doesn't work then first run command:
+
+### `npm audit fix --force`
+
+then
+
+### `npm start`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
