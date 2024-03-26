@@ -21,3 +21,4 @@ export default function App() {
 
 // Second checking
 // Ahmed started working
+// Checking to see if project could be pinned in another profile too.
