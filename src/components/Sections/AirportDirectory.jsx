@@ -16,8 +16,8 @@ export default function AirportDirectory() {
             of travel services to accommodate your needs.
           </h4>
         </div>
-        <div className="service-list">
-          {/* Feature 1 */}
+        <div className="airport-list">
+          {/* Airport 1 */}
           <div class="feature-box-1">
             <div class="feature-content">
               <h5 className="font25 extraBold">London Airports</h5>
@@ -33,7 +33,7 @@ export default function AirportDirectory() {
             </div>
           </div>
 
-          {/* Feature 2 */}
+          {/* Airport 2 */}
           <div class="feature-box-1">
             <div class="feature-content">
               <h5 className="font25 extraBold">Other English Airports</h5>
@@ -63,7 +63,7 @@ export default function AirportDirectory() {
 
 const Wrapper = styled.section`
   width: 100%;
-  padding-top: 20px;
+  padding: 60px 0;
 `;
 const HeaderInfo = styled.div`
   margin-bottom: 30px;

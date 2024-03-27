@@ -15,7 +15,7 @@ export default function Services() {
     <Wrapper class="section services-section" id="services">
       <div className="container">
         <div className="textCenter heading-service">
-          <h2 className="font40 extraBold ">Services</h2>
+          <h2 className="font40 extraBold">Services</h2>
           <h4 className="font20">
             Experience a diverse range of cab services designed to meet your
             every travel requirement.
