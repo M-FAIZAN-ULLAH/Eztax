@@ -12,89 +12,118 @@ import AddImage4 from "../../assets/img/add/4.png";
 
 export default function Services() {
   return (
-    <Wrapper id="services">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
-        <div className="container">
-          <ClientSlider />
+    <Wrapper class="section services-section" id="services">
+      <div className="container">
+        <div className="textCenter heading-service">
+          <h2 className="font40 extraBold ">Services</h2>
+          <h4 className="font20">
+            Experience a diverse range of cab services designed to meet your
+            every travel requirement.
+          </h4>
         </div>
-      </div>
-      <div className="whiteBg" style={{ padding: "60px 0" }}>
-        <div className="container">
-          <HeaderInfo>
-            <h1 className="font40 extraBold">Our Awesome Services</h1>
-            <p className="font13">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              <br />
-              labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
-          </HeaderInfo>
-          <ServiceBoxRow className="flex">
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="roller"
-                title="Graphic Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="monitor"
-                title="Web Design"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox
-                icon="browser"
-                title="Development"
-                subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
-              />
-            </ServiceBoxWrapper>
-            <ServiceBoxWrapper>
-              <ServiceBox icon="printer" title="Print" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor." />
-            </ServiceBoxWrapper>
-          </ServiceBoxRow>
-        </div>
-        <div className="lightBg">
-          <div className="container">
-            <Advertising className="flexSpaceCenter">
-              <AddLeft>
-                <h4 className="font15 semiBold">A few words about company</h4>
-                <h2 className="font40 extraBold">A Study of Creativity</h2>
-                <p className="font12">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
-                  <div style={{ width: "190px" }}>
-                    <FullButton title="Get Started" action={() => alert("clicked")} />
-                  </div>
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Contact Us" action={() => alert("clicked")} border />
-                  </div>
-                </ButtonsRow>
-              </AddLeft>
-              <AddRight>
-                <AddRightInner>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp1 className="flexCenter">
-                      <img src={AddImage1} alt="office" />
-                    </AddImgWrapp1>
-                    <AddImgWrapp2>
-                      <img src={AddImage2} alt="office" />
-                    </AddImgWrapp2>
-                  </div>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp3>
-                      <img src={AddImage3} alt="office" />
-                    </AddImgWrapp3>
-                    <AddImgWrapp4>
-                      <img src={AddImage4} alt="office" />
-                    </AddImgWrapp4>
-                  </div>
-                </AddRightInner>
-              </AddRight>
-            </Advertising>
+        <div className="service-list">
+          {/* Feature 1 */}
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="fa fa-desktop"></i>
+            </div>
+            <div class="feature-content">
+              <h5 className="font25 extraBold">Mini Bus</h5>
+              <p className="font18 semiBold">
+                Spacious transportation for group travels.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 2 */}
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="fa fa-desktop"></i>
+            </div>
+            <div class="feature-content">
+              <h5 className="font25 extraBold">24/7</h5>
+              <p className="font18 semiBold">
+                Around-the-clock service for your convenience.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 3 */}
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="fa fa-desktop"></i>
+            </div>
+            <div class="feature-content">
+              <h5 className="font25 extraBold">Pets services</h5>
+              <p className="font18 semiBold">
+                Ensuring your pet's tranquility throughout the journey.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 4 */}
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="fa fa-desktop"></i>
+            </div>
+            <div class="feature-content">
+              <h5 className="font25 extraBold">Airport Transfer</h5>
+              <p className="font18 semiBold">
+                Seamless transfers to and from major airports.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 5 */}
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="fa fa-desktop"></i>
+            </div>
+            <div class="feature-content">
+              <h5 className="font25 extraBold">Baby Seat</h5>
+              <p className="font18 semiBold">
+                Safe and comfortable rides for your little ones.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 6 */}
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="fa fa-desktop"></i>
+            </div>
+            <div class="feature-content">
+              <h5 className="font25 extraBold">Wheelchair</h5>
+              <p className="font18 semiBold">
+                Accessibility for all passengers.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 7 */}
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="fa fa-desktop"></i>
+            </div>
+            <div class="feature-content">
+              <h5 className="font25 extraBold">Night Out</h5>
+              <p className="font18 semiBold">
+                Reliable transportation for your evening adventures
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 8 */}
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="fa fa-desktop"></i>
+            </div>
+            <div class="feature-content">
+              <h5 className="font25 extraBold">Festivals</h5>
+              <p className="font18 semiBold">
+                Making your festival experiences hassle-free.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -104,7 +133,9 @@ export default function Services() {
 
 const Wrapper = styled.section`
   width: 100%;
+  padding: 60px 0;
 `;
+
 const ServiceBoxRow = styled.div`
   @media (max-width: 860px) {
     flex-direction: column;
