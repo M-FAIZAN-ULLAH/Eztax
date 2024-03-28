@@ -48,12 +48,11 @@
 //   );
 // }
 
-
 // // const Wrapper = styled.section`
 // //   padding-top: 80px;
 // //   width: 100%;
 // //   min-height: 840px;
-  
+
 // //   @media (max-width: 960px) {
 // //     flex-direction: column;
 // //   }
@@ -61,7 +60,7 @@
 
 // const Wrapper = styled.section`
 //   // padding-top: 80px;
-  
+
 //   width: 100%;
 //   min-height: 840px;
 //   // background-image: url(${BackgroundImg}); /* Add your image path here */
@@ -72,8 +71,6 @@
 //     flex-direction: column;
 //   }
 // `;
-
-
 
 // const LeftSide = styled.div`
 //   width: 50%;
@@ -172,8 +169,6 @@
 //   }
 // `;
 
-
-
 import React from "react";
 import styled from "styled-components";
 // Components
@@ -185,41 +180,70 @@ import Dots from "../../assets/svg/Dots";
 
 import carImage from "../../assets/newimg/car.jpg";
 
-import BackgroundImg from "../../assets/newimg/ptwo.jpg"
+import BackgroundImg from "../../assets/newimg/ptwo.jpg";
 import Typewriter from "../Effects/TypeWriter";
 
+import { Typography } from "@material-tailwind/react";
+
 export default function Header() {
-
-
-  const typeWriter = ['your reliable choice for seamless transportation in London! From airports to festivals', 'weve got you covered. Book your cab today!']
-
+  const typeWriter = [
+    "your reliable choice for seamless transportation in London! From airports to festivals",
+    "weve got you covered. Book your cab today!",
+  ];
 
   return (
-    <Wrapper id="home" className="container flexSpaceCenter" >
+    <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60" style={{fontFamily: "sans-serif"}}>TAXI FOR YOU LONDON</h1>
-          <HeaderP className="font20 semiBold" style={{height: 130, width: 500}} >
-              Welcome to Taxi For You - <Typewriter data={typeWriter}/>     
+          <h1 className="extraBold font60" style={{ fontFamily: "sans-serif" }}>
+            TAXI FOR YOU LONDON
+          </h1>
+          <HeaderP
+            className="font20 semiBold"
+            style={{ height: 130, width: 500 }}
+          >
+            Welcome to Taxi For You - <Typewriter data={typeWriter} />
           </HeaderP>
           <BtnWrapper>
             <FullButton title="Book Now" />
             <FullButton title="Quotation" />
           </BtnWrapper>
         </div>
+        <Typography>
+          Material Tailwind is an easy to use components library for Tailwind
+          CSS and Material Design. It provides a simple way to customize your
+          components, you can change the colors, fonts, breakpoints and
+          everything you need.
+        </Typography>
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius2" src={carImage} alt="office" style={{zIndex: 1, height: 400, width: 800}} />
-          <QuoteWrapper className="flexCenter darkBg radius8" style={{backgroundColor: "yellow"}}>
+          <Img
+            className="radius2"
+            src={carImage}
+            alt="office"
+            style={{ zIndex: 1, height: 400, width: 800 }}
+          />
+          <QuoteWrapper
+            className="flexCenter darkBg radius8"
+            style={{ backgroundColor: "yellow" }}
+          >
             <QuotesWrapper>
-              <QuotesIcon style={{backgroundColor: "yellow"}} />
+              <QuotesIcon style={{ backgroundColor: "yellow" }} />
             </QuotesWrapper>
             <div>
-              <p className="font20 whiteColor" style={{color: "black"}}>
-                <em>Life is like riding in a taxi. Whether you are going anywhere or not, the meter keeps ticking.</em>
+              <p className="font20 whiteColor" style={{ color: "black" }}>
+                <em>
+                  Life is like riding in a taxi. Whether you are going anywhere
+                  or not, the meter keeps ticking.
+                </em>
               </p>
-              <p className="font13 orangeColor textRight" style={{color: 'black'}}>John C. Maxwell</p>
+              <p
+                className="font13 orangeColor textRight"
+                style={{ color: "black" }}
+              >
+                John C. Maxwell
+              </p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>
