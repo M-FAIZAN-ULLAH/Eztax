@@ -16,7 +16,7 @@ export default function AirportDirectory() {
             of travel services to accommodate your needs.
           </h4>
         </div>
-        <div className="airport-list">
+        <div className="airport-list flex flex-col sm:flex-row justify-center ">
           {/* Airport 1 */}
           <div class="feature-box-1">
             <div class="feature-content">

@@ -43,9 +43,10 @@ export default function TopNavbar() {
           </Link>
           <BurderWrapper
             className="pointer"
+            style={{ color: "yellow", stroke: "yellow" }}
             onClick={() => toggleSidebar(!sidebarOpen)}
           >
-            <BurgerIcon style={{ color: "yellow" }} />
+            <BurgerIcon style={{ color: "yellow", stroke: "yellow" }} />
           </BurderWrapper>
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">

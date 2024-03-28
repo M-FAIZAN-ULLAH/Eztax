@@ -5,30 +5,31 @@ import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage1 from "../../assets/img/add/1.png";
-import AddImage2 from "../../assets/img/add/2.png";
-import AddImage3 from "../../assets/img/add/3.png";
-import AddImage4 from "../../assets/img/add/4.png";
+import backgroundImg from "../../assets/img/Bg-img-taxi.jpg";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Services() {
   return (
     <Wrapper class="section services-section" id="services">
-      <div className="container">
+      <div className="container whiteColor">
         <div className="textCenter heading-service">
-          <h2 className="font40 extraBold">Services</h2>
-          <h4 className="font20">
+          <h2 className="font40 extraBold ">Services</h2>
+          <h4 className="font20 semiBold">
             Experience a diverse range of cab services designed to meet your
             every travel requirement.
           </h4>
         </div>
-        <div className="service-list">
+        <div className="service-list grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center">
           {/* Feature 1 */}
-          <div class="feature-box-1">
+          <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
               <i class="fa fa-desktop"></i>
             </div>
             <div class="feature-content">
-              <h5 className="font25 extraBold">Mini Bus</h5>
+              <h5 className="font25 extraBold" style={{ color: "white" }}>
+                Mini Bus
+              </h5>
               <p className="font18 semiBold">
                 Spacious transportation for group travels.
               </p>
@@ -36,12 +37,12 @@ export default function Services() {
           </div>
 
           {/* Feature 2 */}
-          <div class="feature-box-1">
-            <div class="icon">
-              <i class="fa fa-desktop"></i>
-            </div>
+          <div class="feature-box-1 bg-black opacity-80">
+            <div class="icon"></div>
             <div class="feature-content">
-              <h5 className="font25 extraBold">24/7</h5>
+              <h5 className="font25 extraBold" style={{ color: "white" }}>
+                24/7
+              </h5>
               <p className="font18 semiBold">
                 Around-the-clock service for your convenience.
               </p>
@@ -49,12 +50,14 @@ export default function Services() {
           </div>
 
           {/* Feature 3 */}
-          <div class="feature-box-1">
+          <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
               <i class="fa fa-desktop"></i>
             </div>
             <div class="feature-content">
-              <h5 className="font25 extraBold">Pets services</h5>
+              <h5 className="font25 extraBold" style={{ color: "white" }}>
+                Pets services
+              </h5>
               <p className="font18 semiBold">
                 Ensuring your pet's tranquility throughout the journey.
               </p>
@@ -62,12 +65,14 @@ export default function Services() {
           </div>
 
           {/* Feature 4 */}
-          <div class="feature-box-1">
+          <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
               <i class="fa fa-desktop"></i>
             </div>
             <div class="feature-content">
-              <h5 className="font25 extraBold">Airport Transfer</h5>
+              <h5 className="font25 extraBold" style={{ color: "white" }}>
+                Airport Transfer
+              </h5>
               <p className="font18 semiBold">
                 Seamless transfers to and from major airports.
               </p>
@@ -75,12 +80,14 @@ export default function Services() {
           </div>
 
           {/* Feature 5 */}
-          <div class="feature-box-1">
+          <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
               <i class="fa fa-desktop"></i>
             </div>
             <div class="feature-content">
-              <h5 className="font25 extraBold">Baby Seat</h5>
+              <h5 className="font25 extraBold" style={{ color: "white" }}>
+                Baby Seat
+              </h5>
               <p className="font18 semiBold">
                 Safe and comfortable rides for your little ones.
               </p>
@@ -88,12 +95,14 @@ export default function Services() {
           </div>
 
           {/* Feature 6 */}
-          <div class="feature-box-1">
+          <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
               <i class="fa fa-desktop"></i>
             </div>
             <div class="feature-content">
-              <h5 className="font25 extraBold">Wheelchair</h5>
+              <h5 className="font25 extraBold" style={{ color: "white" }}>
+                Wheelchair
+              </h5>
               <p className="font18 semiBold">
                 Accessibility for all passengers.
               </p>
@@ -101,12 +110,14 @@ export default function Services() {
           </div>
 
           {/* Feature 7 */}
-          <div class="feature-box-1">
+          <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
               <i class="fa fa-desktop"></i>
             </div>
             <div class="feature-content">
-              <h5 className="font25 extraBold">Night Out</h5>
+              <h5 className="font25 extraBold" style={{ color: "white" }}>
+                Night Out
+              </h5>
               <p className="font18 semiBold">
                 Reliable transportation for your evening adventures
               </p>
@@ -114,12 +125,14 @@ export default function Services() {
           </div>
 
           {/* Feature 8 */}
-          <div class="feature-box-1">
+          <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
               <i class="fa fa-desktop"></i>
             </div>
             <div class="feature-content">
-              <h5 className="font25 extraBold">Festivals</h5>
+              <h5 className="font25 extraBold" style={{ color: "white" }}>
+                Festivals
+              </h5>
               <p className="font18 semiBold">
                 Making your festival experiences hassle-free.
               </p>
@@ -134,6 +147,12 @@ export default function Services() {
 const Wrapper = styled.section`
   width: 100%;
   padding: 60px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("${backgroundImg}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 `;
 
 const ServiceBoxRow = styled.div`

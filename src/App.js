@@ -1,7 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 // Screens
 import Landing from "./screens/Landing.jsx";
+import FormPage from "./screens/FormPage.jsx";
+import QuotationPage from "./screens/QuotationPage.jsx";
 
 export default function App() {
   return (
@@ -14,8 +19,13 @@ export default function App() {
           rel="stylesheet"
         />
       </Helmet>
-      <Landing />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/form" element={<FormPage />} />
+          <Route path="/quote" element={<QuotationPage />} />
+        </Routes>
+      </Router>
     </>
   );
 }
-

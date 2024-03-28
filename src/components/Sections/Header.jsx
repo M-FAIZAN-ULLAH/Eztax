@@ -171,6 +171,7 @@
 
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
@@ -203,8 +204,13 @@ export default function Header() {
             Welcome to Taxi For You - <Typewriter data={typeWriter} />
           </HeaderP>
           <BtnWrapper>
-            <FullButton title="Book Now" />
-            <FullButton title="Quotation" />
+            <Link to="/form" style={{ width: "300px" }}>
+              <FullButton title="Book Now" />
+            </Link>
+
+            <Link to="/quote" style={{ width: "300px" }}>
+              <FullButton title="Quotation" />
+            </Link>
           </BtnWrapper>
         </div>
       </LeftSide>

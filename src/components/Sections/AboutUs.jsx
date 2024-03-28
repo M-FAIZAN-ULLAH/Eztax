@@ -7,13 +7,13 @@ export default function AboutUs() {
     <section style={{ width: "100%", padding: "60px 0" }}>
       <div className="container">
         <div
-          className="flex flex-col  justify-center p-12 rounded-xl "
+          className="flex flex-col gap-2 justify-center p-12 rounded-xl "
           style={{
             backgroundColor: "#cfcfcf",
             boxShadow: "0 0 20px rgba(0, 0, 0, 0.3)",
           }}
         >
-          <h1 className="font-bold text-4xl mb-5">About Us</h1>
+          <h1 className="font-bold text-4xl">About Us</h1>
           <p className=" text-lg">
             Taxi For You is a London-based taxi company that offers a range of
             services to cater to all your transportation needs. Whether you need
