@@ -3,16 +3,16 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 // Assets
 import CloseIcon from "../../assets/svg/CloseIcon";
-import LogoIcon from "../../assets/svg/Logo";
+import LogoIcon from "../../assets/Logo.png";
 
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   return (
     <Wrapper className="animate darkBg" sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
-          <LogoIcon />
+          {/* <img src={LogoIcon} alt="A1 24 Hour" /> */}
           <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
-            Taxi For You
+            A1 24 HOUR
           </h1>
         </div>
         <CloseBtn
@@ -44,7 +44,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="services"
+            to="about-us"
             spy={true}
             smooth={true}
             offset={-60}
@@ -58,7 +58,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="projects"
+            to="services"
             spy={true}
             smooth={true}
             offset={-60}
@@ -72,7 +72,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="blog"
+            to="fleets"
             spy={true}
             smooth={true}
             offset={-60}
@@ -86,7 +86,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="pricing"
+            to="airport-directory"
             spy={true}
             smooth={true}
             offset={-60}

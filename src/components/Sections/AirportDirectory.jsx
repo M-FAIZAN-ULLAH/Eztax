@@ -7,7 +7,7 @@ import TestimonialSlider from "../Elements/TestimonialSlider";
 
 export default function AirportDirectory() {
   return (
-    <Wrapper class="section services-section" id="blog">
+    <Wrapper class="section services-section" id="airport-directory">
       <div className="container">
         <div className="textCenter heading-service">
           <h2 className="font40 extraBold ">AIRPORT DIRECTORY</h2>

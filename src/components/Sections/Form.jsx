@@ -1,13 +1,9 @@
 import React from "react";
 
 // This is the about us section. Most if not all styling will be done using tailwind css
-import {
-  Card,
-  Input,
-  Checkbox,
-  Button,
-  Typography,
-} from "@material-tailwind/react";
+import { Card, Input, Button, Typography } from "@material-tailwind/react";
+
+import { Link } from "react-router-dom";
 
 import { LoadScript } from "@react-google-maps/api";
 import { Autocomplete } from "@react-google-maps/api";
@@ -28,7 +24,7 @@ export default function Form(props) {
   };
 
   return (
-    <div className="container flex justify-center">
+    <div className="container flex justify-center lightBg">
       <LoadScript googleMapsApiKey="" libraries={["places"]}>
         <Card color="transparent" shadow={false} className="mt-36 mb-36">
           <Typography variant="h2" color="blue-gray">
@@ -165,9 +161,25 @@ export default function Form(props) {
               />
             </div>
 
-            <Button className="mt-6" color="yellow" fullWidth>
+            <Button
+              className="mt-6"
+              variant="gradient"
+              color="yellow"
+              ripple={true}
+              fullWidth
+            >
               Submit
             </Button>
+            <Link to="/">
+              <Button
+                className="mt-4 border-black"
+                variant="outlined"
+                color="black"
+                fullWidth
+              >
+                Go Back
+              </Button>
+            </Link>
           </form>
         </Card>
       </LoadScript>

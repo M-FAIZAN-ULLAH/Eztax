@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 // Components
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
-import LogoIcon from "../../assets/svg/Logo";
+
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 
-export default function TopNavbar() {
+export default function TopNavbar({ inFormPage }) {
   const [y, setY] = useState(window.scrollY);
   const [sidebarOpen, toggleSidebar] = useState(false);
 
@@ -21,15 +22,17 @@ export default function TopNavbar() {
 
   return (
     <>
-      <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+      {!inFormPage && (
+        <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+      )}
+
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       <Wrapper
         className="flexCenter animate whiteBg"
         style={y > 100 ? { height: "60px" } : { height: "80px" }}
       >
         <NavInner className="container flexSpaceCenter">
-          <Link className="pointer flexNullCenter" to="home" smooth={true}>
-            <LogoIcon />
+          <Link to="/">
             <h1
               style={{
                 marginLeft: "10px",
@@ -38,141 +41,145 @@ export default function TopNavbar() {
               }}
               className="font20 extraBold"
             >
-              Taxi For You
+              A1 24 HOUR
             </h1>
           </Link>
-          <BurderWrapper
-            className="pointer"
-            style={{ color: "yellow", stroke: "yellow" }}
-            onClick={() => toggleSidebar(!sidebarOpen)}
-          >
-            <BurgerIcon style={{ color: "yellow", stroke: "yellow" }} />
-          </BurderWrapper>
-          <UlWrapper className="flexNullCenter">
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{
-                  padding: "10px 15px",
-                  color: "yellow",
-                  fontFamily: "inherit",
-                }}
-                to="home"
-                spy={true}
-                smooth={true}
-                offset={-80}
+          {!inFormPage && (
+            <>
+              <BurderWrapper
+                className="pointer"
+                style={{ color: "yellow", stroke: "yellow" }}
+                onClick={() => toggleSidebar(!sidebarOpen)}
               >
-                Home
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{
-                  padding: "10px 15px",
-                  color: "yellow",
-                  fontFamily: "inherit",
-                }}
-                to="services"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                About Us
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{
-                  padding: "10px 15px",
-                  color: "yellow",
-                  fontFamily: "inherit",
-                }}
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Services
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{
-                  padding: "10px 15px",
-                  color: "yellow",
-                  fontFamily: "inherit",
-                }}
-                to="blog"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Fleets
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{
-                  padding: "10px 15px",
-                  color: "yellow",
-                  fontFamily: "inherit",
-                }}
-                to="pricing"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Airport Directory
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{
-                  padding: "10px 15px",
-                  color: "yellow",
-                  fontFamily: "inherit",
-                }}
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                More Info
-              </Link>
-            </li>
-          </UlWrapper>
-          <UlWrapperRight className="flexNullCenter">
-            <li className="semiBold font15 pointer">
-              <a
-                href="/"
-                style={{
-                  padding: "10px 30px 10px 0",
-                  color: "yellow",
-                  fontFamily: "inherit",
-                }}
-              >
-                Log in
-              </a>
-            </li>
-            <li className="semiBold font15 pointer flexCenter">
-              <a
-                href="/"
-                className="radius8 lightBg"
-                style={{
-                  padding: "10px 15px",
-                  backgroundColor: "yellow",
-                  color: "black",
-                }}
-              >
-                Get Started
-              </a>
-            </li>
-          </UlWrapperRight>
+                <BurgerIcon style={{ color: "yellow", stroke: "yellow" }} />
+              </BurderWrapper>
+              <UlWrapper className="flexNullCenter">
+                <li className="semiBold font15 pointer">
+                  <ScrollLink
+                    activeClass="active"
+                    style={{
+                      padding: "10px 15px",
+                      color: "yellow",
+                      fontFamily: "inherit",
+                    }}
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                  >
+                    Home
+                  </ScrollLink>
+                </li>
+                <li className="semiBold font15 pointer">
+                  <ScrollLink
+                    activeClass="active"
+                    style={{
+                      padding: "10px 15px",
+                      color: "yellow",
+                      fontFamily: "inherit",
+                    }}
+                    to="about-us"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                  >
+                    About Us
+                  </ScrollLink>
+                </li>
+                <li className="semiBold font15 pointer">
+                  <ScrollLink
+                    activeClass="active"
+                    style={{
+                      padding: "10px 15px",
+                      color: "yellow",
+                      fontFamily: "inherit",
+                    }}
+                    to="services"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                  >
+                    Services
+                  </ScrollLink>
+                </li>
+                <li className="semiBold font15 pointer">
+                  <ScrollLink
+                    activeClass="active"
+                    style={{
+                      padding: "10px 15px",
+                      color: "yellow",
+                      fontFamily: "inherit",
+                    }}
+                    to="fleets"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                  >
+                    Fleets
+                  </ScrollLink>
+                </li>
+                <li className="semiBold font15 pointer">
+                  <ScrollLink
+                    activeClass="active"
+                    style={{
+                      padding: "10px 15px",
+                      color: "yellow",
+                      fontFamily: "inherit",
+                    }}
+                    to="airport-directory"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                  >
+                    Airport Directory
+                  </ScrollLink>
+                </li>
+                <li className="semiBold font15 pointer">
+                  <ScrollLink
+                    activeClass="active"
+                    style={{
+                      padding: "10px 15px",
+                      color: "yellow",
+                      fontFamily: "inherit",
+                    }}
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                  >
+                    More Info
+                  </ScrollLink>
+                </li>
+              </UlWrapper>
+              <UlWrapperRight className="flexNullCenter">
+                <li className="semiBold font15 pointer">
+                  <a
+                    href="/"
+                    style={{
+                      padding: "10px 30px 10px 0",
+                      color: "yellow",
+                      fontFamily: "inherit",
+                    }}
+                  >
+                    Log in
+                  </a>
+                </li>
+                <li className="semiBold font15 pointer flexCenter">
+                  <a
+                    href="/"
+                    className="radius8 lightBg"
+                    style={{
+                      padding: "10px 15px",
+                      backgroundColor: "yellow",
+                      color: "black",
+                    }}
+                  >
+                    Get Started
+                  </a>
+                </li>
+              </UlWrapperRight>
+            </>
+          )}
         </NavInner>
       </Wrapper>
     </>

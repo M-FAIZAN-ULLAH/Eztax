@@ -1,13 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-// Components
-import ClientSlider from "../Elements/ClientSlider";
-import ServiceBox from "../Elements/ServiceBox";
-import FullButton from "../Buttons/FullButton";
+
 // Assets
 import backgroundImg from "../../assets/img/Bg-img-taxi.jpg";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  FaBus,
+  FaRegClock,
+  FaPlane,
+  FaBaby,
+  FaWheelchair,
+  FaWineGlass,
+} from "react-icons/fa";
+import { MdOutlinePets } from "react-icons/md";
+import { BiParty } from "react-icons/bi";
 
 export default function Services() {
   return (
@@ -24,7 +30,7 @@ export default function Services() {
           {/* Feature 1 */}
           <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
-              <i class="fa fa-desktop"></i>
+              <FaBus className="icon-style" />
             </div>
             <div class="feature-content">
               <h5 className="font25 extraBold" style={{ color: "white" }}>
@@ -38,7 +44,9 @@ export default function Services() {
 
           {/* Feature 2 */}
           <div class="feature-box-1 bg-black opacity-80">
-            <div class="icon"></div>
+            <div class="icon">
+              <FaRegClock />
+            </div>
             <div class="feature-content">
               <h5 className="font25 extraBold" style={{ color: "white" }}>
                 24/7
@@ -52,7 +60,7 @@ export default function Services() {
           {/* Feature 3 */}
           <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
-              <i class="fa fa-desktop"></i>
+              <MdOutlinePets />
             </div>
             <div class="feature-content">
               <h5 className="font25 extraBold" style={{ color: "white" }}>
@@ -67,7 +75,7 @@ export default function Services() {
           {/* Feature 4 */}
           <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
-              <i class="fa fa-desktop"></i>
+              <FaPlane />
             </div>
             <div class="feature-content">
               <h5 className="font25 extraBold" style={{ color: "white" }}>
@@ -82,7 +90,7 @@ export default function Services() {
           {/* Feature 5 */}
           <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
-              <i class="fa fa-desktop"></i>
+              <FaBaby />
             </div>
             <div class="feature-content">
               <h5 className="font25 extraBold" style={{ color: "white" }}>
@@ -97,7 +105,7 @@ export default function Services() {
           {/* Feature 6 */}
           <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
-              <i class="fa fa-desktop"></i>
+              <FaWheelchair />
             </div>
             <div class="feature-content">
               <h5 className="font25 extraBold" style={{ color: "white" }}>
@@ -112,7 +120,7 @@ export default function Services() {
           {/* Feature 7 */}
           <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
-              <i class="fa fa-desktop"></i>
+              <FaWineGlass />
             </div>
             <div class="feature-content">
               <h5 className="font25 extraBold" style={{ color: "white" }}>
@@ -127,7 +135,7 @@ export default function Services() {
           {/* Feature 8 */}
           <div class="feature-box-1 bg-black opacity-80">
             <div class="icon">
-              <i class="fa fa-desktop"></i>
+              <BiParty />
             </div>
             <div class="feature-content">
               <h5 className="font25 extraBold" style={{ color: "white" }}>

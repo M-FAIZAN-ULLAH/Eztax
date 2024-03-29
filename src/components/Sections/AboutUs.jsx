@@ -4,7 +4,7 @@ import React from "react";
 
 export default function AboutUs() {
   return (
-    <section style={{ width: "100%", padding: "60px 0" }}>
+    <section id="about-us" style={{ width: "100%", padding: "60px 0" }}>
       <div className="container">
         <div
           className="flex flex-col gap-2 justify-center p-12 rounded-xl "

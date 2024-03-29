@@ -7,7 +7,7 @@ import Footer from "../components/Sections/Footer";
 export default function FormPage() {
   return (
     <>
-      <TopNavbar />
+      <TopNavbar inFormPage={true} />
       <Form quotation={false} heading={"Book Your Ride"} />
       <Footer />
     </>

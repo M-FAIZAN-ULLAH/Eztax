@@ -339,6 +339,11 @@ body {
 .orangeBg {
   background-color: #f2b300;
 }
+
+.yellowBg {
+  background-color: #ff0;
+}
+
 .lightBg {
   background-color: #f5f5f5;
 }
@@ -353,6 +358,14 @@ body {
 }
 .whiteBg {
   background-color: #fff;
+}
+
+/* Hero Section */
+
+.hero-car {
+  width: 800px;
+  height: 400px;
+  z-index: 1;
 }
 
 /* Services Section */
@@ -394,14 +407,17 @@ body {
   width: 70px;
   height: 70px;
   line-height: 70px;
-  background: #fc5356;
-  color: #ffffff;
+  background: rgba(255, 255, 0, 0.753);
+  color: #000000ed;
   text-align: center;
   border-radius: 50%;
   margin-bottom: 22px;
-  font-size: 27px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.feature-box-1 .icon i {
+.feature-box-1 .icon .icon-style {
   line-height: 70px;
 }
 .feature-box-1 h5 {

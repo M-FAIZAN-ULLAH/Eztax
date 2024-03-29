@@ -7,7 +7,7 @@ import Footer from "../components/Sections/Footer";
 export default function QuotationPage() {
   return (
     <>
-      <TopNavbar />
+      <TopNavbar inFormPage={true} />
       <Form quotation={true} heading={"Get Quotation"} />
       <Footer />
     </>
