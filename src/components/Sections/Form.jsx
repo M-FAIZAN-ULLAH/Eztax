@@ -1,15 +1,36 @@
-import React from "react";
+import React, { useRef } from "react";
 
 // This is the about us section. Most if not all styling will be done using tailwind css
-import { Card, Input, Button, Typography } from "@material-tailwind/react";
+import {
+  Card,
+  Input,
+  Button,
+  Typography,
+  input,
+} from "@material-tailwind/react";
 
 import { Link } from "react-router-dom";
 
-import { LoadScript } from "@react-google-maps/api";
-import { Autocomplete } from "@react-google-maps/api";
+// Google maps
+import {
+  StandaloneSearchBox,
+  LoadScript,
+  Autocomplete,
+} from "@react-google-maps/api";
 
 export default function Form(props) {
   const [autocomplete, setAutocomplete] = React.useState(null);
+
+  const inputRef = useRef();
+
+  const handlePlaceChanged = () => {
+    const [place] = inputRef.current.getPlace();
+    if (place) {
+      console.log(place.formatted_address);
+      console.log(place.geometry.location.lat());
+      console.log(place.geometry.location.lng());
+    }
+  };
 
   const onLoad = (autocomplete) => {
     setAutocomplete(autocomplete);
@@ -26,12 +47,12 @@ export default function Form(props) {
   return (
     <div className="container flex justify-center lightBg">
       <LoadScript googleMapsApiKey="" libraries={["places"]}>
-        <Card color="transparent" shadow={false} className="mt-36 mb-36">
+        <Card color="white" shadow={true} className="my-32 p-12">
           <Typography variant="h2" color="blue-gray">
             {props.heading}
           </Typography>
 
-          <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+          <form className="mt-8 mb-2 ">
             <div className="mb-1 flex flex-col gap-6">
               {!props.quotation && (
                 <>
@@ -59,20 +80,19 @@ export default function Form(props) {
                   />
                 </>
               )}
-
               <Typography variant="h6" color="blue-gray" className="-mb-3">
                 Pickup Location
               </Typography>
-              <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+              <StandaloneSearchBox
+                onLoad={(ref) => (inputRef.current = ref)}
+                onPlaceChanged={handlePlaceChanged}
+              >
                 <Input
                   size="lg"
                   placeholder="Enter Pickup Location"
                   className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-                  labelProps={{
-                    className: "before:content-none after:content-none",
-                  }}
                 />
-              </Autocomplete>
+              </StandaloneSearchBox>
               <Typography variant="h6" color="blue-gray" className="-mb-3">
                 Select no of stops in between journey
               </Typography>
@@ -87,26 +107,30 @@ export default function Form(props) {
               <Typography variant="h6" color="blue-gray" className="-mb-3">
                 Drop-off Location
               </Typography>
-              <Input
-                size="lg"
-                placeholder="Enter Drop-off Location"
-                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-                labelProps={{
-                  className: "before:content-none after:content-none",
-                }}
-              />
-
+              <StandaloneSearchBox
+                onLoad={(ref) => (inputRef.current = ref)}
+                onPlaceChanged={handlePlaceChanged}
+              >
+                <Input
+                  size="lg"
+                  placeholder="Enter Drop-off Location"
+                  className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                  labelProps={{
+                    className: "before:content-none after:content-none",
+                  }}
+                />
+              </StandaloneSearchBox>
               <Typography variant="h6" color="blue-gray" className="-mb-3">
                 Phone Number
               </Typography>
               <Input
-                size="lg"
-                placeholder="+44 1234 567890"
-                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-                labelProps={{
-                  className: "before:content-none after:none",
-                }}
+                placeholder="Phone Number"
+                variant="outlined"
+                label="Outlined"
+                size="md"
+                className="border"
               />
+
               <Typography
                 variant="small"
                 color="gray"
@@ -114,7 +138,6 @@ export default function Form(props) {
               >
                 Enter a phone number starting with country code
               </Typography>
-
               <Typography variant="h6" color="blue-gray" className="-mb-3">
                 Choose Fleet
               </Typography>
