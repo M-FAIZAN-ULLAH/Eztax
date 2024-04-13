@@ -34,7 +34,7 @@ export default function Form(props) {
 
     try {
       const emailData = {
-        to: "amarahabib630@gmail.com",
+        // to: "Reciever email",
         subject: "Book Now",
         text: `
           Name: ${formData.name}
