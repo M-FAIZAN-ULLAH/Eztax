@@ -31,7 +31,7 @@ export default function Contact() {
     
     try {
       const emailData = {
-        to: "amarahabib630@gmail.com",
+        to: "reviever email!",
         subject: "Contact Us",
         text: `
           First Name: ${formData.fname}

@@ -1,31 +1,31 @@
 // emailController.js
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: "gmail",
   auth: {
-    user: 'your email',
-    pass: 'password'
-  }
+    user: "your email",
+    pass: "password",
+  },
 });
 
 exports.sendEmail = (req, res) => {
   const { to, subject, text } = req.body;
 
   const mailOptions = {
-    from: 'your email',
+    from: "your email",
     to: to,
     subject: subject,
-    text: text
+    text: text,
   };
 
-  transporter.sendMail(mailOptions, function(error, info){
+  transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
       console.log(error);
-      res.status(500).send('Error sending email');
+      res.status(500).send("Error sending email");
     } else {
-      console.log('Email sent: ' + info.response);
-      res.status(200).send('Email sent successfully');
+      console.log("Email sent: " + info.response);
+      res.status(200).send("Email sent successfully");
     }
   });
 };

@@ -15,14 +15,14 @@ export default function AboutUs() {
         >
           <h1 className="font-bold text-4xl">About Us</h1>
           <p className=" text-lg">
-            Taxi For You is a London-based taxi company that offers a range of
+            A1 24 HOUR is a taxi company that offers a range of
             services to cater to all your transportation needs. Whether you need
             a ride to the airport, a trip to the city, or a ride to a festival,
             we've got you covered. Our drivers are professional and reliable,
             and our fleet of vehicles is well-maintained and comfortable. We
             pride ourselves on providing excellent customer service and making
             sure you get to your destination safely and on time. Book your cab
-            with Taxi For You today and experience the difference!
+            with A1 24 HOUR today and experience the difference!
           </p>
         </div>
       </div>

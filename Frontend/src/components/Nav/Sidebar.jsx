@@ -112,22 +112,23 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
       <UlStyle className="flexSpaceCenter">
         <li className="semiBold font15 pointer">
           <a
-            href="/"
+            href="/quote"
             style={{ padding: "10px 30px 10px 0" }}
             className="whiteColor"
           >
-            Log in
+            Quotation
           </a>
         </li>
         <li className="semiBold font15 pointer flexCenter">
           <a
-            href="/"
+            href="/form"
             className="radius8 lightBg"
             style={{ padding: "10px 15px" }}
           >
-            Get Started
+            Book Now
           </a>
         </li>
+              
       </UlStyle>
     </Wrapper>
   );

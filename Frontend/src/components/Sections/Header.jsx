@@ -24,7 +24,7 @@ export default function Header() {
       <LeftSide className="flexCenter">
         <div>
           <h1 className="extraBold font60" style={{ fontFamily: "sans-serif" }}>
-            TAXI FOR YOU LONDON
+            A1 24 HOUR
           </h1>
           <HeaderP
             className="font20 semiBold"
